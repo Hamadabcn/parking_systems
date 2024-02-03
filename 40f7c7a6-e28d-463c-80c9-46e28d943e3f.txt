@@ -1,0 +1,10 @@
+Ticket number: 40f7c7a6-e28d-463c-80c9-46e28d943e3f
+Date and time: 17/10/2023 02:14:07
+Name: hamada
+ID number: 30
+Car plate number: 30
+Address: 39
+Minutes parked: 60
+Cost: $9.00
+IVA tax: $1.89
+Total price: $9.00

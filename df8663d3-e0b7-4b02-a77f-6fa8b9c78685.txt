@@ -1,0 +1,10 @@
+Ticket number: df8663d3-e0b7-4b02-a77f-6fa8b9c78685
+Date and time: 27/10/2023 01:58:44
+Name: hamada
+ID number: 30382102
+Car plate number: 3038MJM
+Address: muntaner 183
+Minutes parked: 120
+Cost: $18.00
+IVA tax: $3.78
+Total price: $18.00

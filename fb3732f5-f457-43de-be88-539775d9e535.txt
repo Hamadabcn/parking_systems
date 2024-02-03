@@ -1,0 +1,15 @@
+Ticket number: fb3732f5-f457-43de-be88-539775d9e535
+      PARKING BENSI
+     C/ Paris 179-181
+      NIF B66715459
+     +34 630 379 484
+    mohbcn1@hotmail.com
+Date:27/10/2023 01:55:31
+Name: Mohamed
+ID: 30382102E
+plate: 2002BDT
+Address: Muntaner 183
+Minutes: 60
+Cost:€ 4.13
+IVA:€ 0.87
+price: 5.00 €

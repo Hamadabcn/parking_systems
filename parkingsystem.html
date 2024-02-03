@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Parking Program</title>
+
+</head>
+<body>
+    <h1>PARKING BENSI</h1>
+    <p>Enter the number of minutes you parked and click the button to calculate the cost.</p>
+    <input type="number" id="minutes" min="0" value="0">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+    <script>
+        // Define the prices per minute for different time intervals
+        var price_1 = 0.125; // for 1 to 20 minutes
+        var price_2 = 0.0625; // for 21 to 60 minutes
+        var price_3 = 36; // for a day
+        var price_4 = 0.0784; // for 61 to 180 minutes
+        var price_5 = 0.0784; // for 181 to 420 minutes
+
+        // Define a function to calculate the total cost based on the number of minutes
+        function calculate() {
+            // Get the number of minutes from the input element
+            var minutes = document.getElementById("minutes").value;
+
+            // Convert the minutes to a number
+            minutes = Number(minutes);
+
+            // Check if the minutes are valid
+            if (minutes <= 0) {
+                alert("Invalid input. Please enter a positive number.");
+                return;
+            }
+
+            // Calculate the total cost based on the number of minutes
+            var cost;
+            if (minutes <= 20) {
+                cost = minutes * price_1;
+            } else if (minutes <= 60) {
+                cost = 20 * price_1 + (minutes - 20) * price_2;
+            } else {
+                // Assume that a day is 24 hours or 1440 minutes
+                var days = Math.floor(minutes / 1440); // get the number of full days
+                var remainder = minutes % 1440; // get the remaining minutes
+                if (remainder <= 20) {
+                    cost = days * price_3 + remainder * price_1;
+                } else if (remainder <= 60) {
+                    cost = days * price_3 + 20 * price_1 + (remainder - 20) * price_2;
+                } else if (remainder <= 180) {
+                    cost = days * price_3 + 20 * price_1 + 40 * price_2 + (remainder - 60) * price_4;
+                } else {
+                    // If the remaining minutes are more than three hours, round up to the next day
+                    cost = (days + 1) * price_3;
+                    
+                }
+            }
+
+            // Display the total cost with two decimal places in the result element
+            document.getElementById("result").innerHTML = "The total cost is $" + cost.toFixed(2);
+        }
+    </script>
+</body>
+</html>
